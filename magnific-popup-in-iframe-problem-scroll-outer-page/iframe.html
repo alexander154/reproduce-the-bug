@@ -1,0 +1,58 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="lightbox/magnific-popup.css">
+
+</head>
+<body style="height:1000px;">
+<h1>Ciao da iframe!!!</h1>
+<a class="popup" href="http://cdn3.mos.techradar.futurecdn.net//art/mobile_phones/Samsung/GalaxyS4/HandsOn/Update/SamsungGalaxy_S4_review_03-580-90.JPG">
+    <img
+         src="http://cdn3.mos.techradar.futurecdn.net//art/mobile_phones/Samsung/GalaxyS4/HandsOn/Update/SamsungGalaxy_S4_review_03-580-90.JPG"
+         />
+</a>
+<a class="popup" href="http://cdn3.mos.techradar.futurecdn.net//art/mobile_phones/Samsung/GalaxyS4/HandsOn/Update/SamsungGalaxy_S4_review_03-580-90.JPG">
+    <img
+         src="http://cdn3.mos.techradar.futurecdn.net//art/mobile_phones/Samsung/GalaxyS4/HandsOn/Update/SamsungGalaxy_S4_review_03-580-90.JPG"
+         />
+</a>
+
+
+
+<p style="height:1000px;">This is a paragraph</p>
+<button onclick="alert('Clicked')">Click</button>
+<textarea name="" id="" cols="30" rows="10">This is a textarea</textarea>
+
+<p style="height:1000px;">This is a paragraph</p>
+
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./lightbox/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.popup').magnificPopup({
+            type:'image',
+            closeOnContentClick:true,
+            //mainClass:'mfp-img-mobile',
+            //fixedContentPos:'auto',
+            image:{
+
+                verticalFit:true
+            },
+            callbacks:{
+                open:function () {
+                },
+                close:function () {
+                    // Will fire when popup is closed
+                },
+                elementParse:function (item) {
+                    item.el.css('width', 100)
+                    // feel free to modify here item object
+                }
+            }
+
+        });
+    })
+</script>
+</body>
+</html>
